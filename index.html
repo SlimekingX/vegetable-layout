@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vegetables Layout</title>
+
+  <!-- 引入 Noto Sans 字體 (400, 700, 900) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- 置中主要容器 -->
+  <div class="container">
+    
+    <!-- 1. 頁首 Header -->
+    <header class="header">
+      <h1 class="logo">Vegetables</h1>
+      <div class="header-right">
+        <div class="social-icons">
+          <a href="#"><img src="images/icon-fb.png" alt="FB"></a>
+          <a href="#"><img src="images/icon-ig.png" alt="IG"></a>
+        </div>
+        <div class="auth-buttons">
+          <a href="#" class="btn">LOGIN</a>
+          <a href="#" class="btn">JOIN</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- 2. 導覽列 Navbar -->
+    <nav class="navbar">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Vegetables</a></li>
+        <li><a href="#">Online</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- 3. 主視覺 Banner -->
+    <section class="banner">
+      <img src="images/banner.png" alt="Vegetables Banner">
+    </section>
+
+    <!-- 4. 主要內容區 (兩欄 Layout) -->
+    <main class="main-content">
+      <!-- 左側 Vegetables 區塊 -->
+      <section class="card">
+        <h2 class="card-title">Vegetables</h2>
+        <div class="vegetable-grid">
+          
+          <!-- 卡片 1 -->
+          <div class="veg-item">
+            <img src="images/veg1.png" alt="Carrot">
+            <div class="veg-info">
+              <h3 class="veg-title">Carrot</h3>
+              <p class="veg-sub">Carrot</p>
+            </div>
+          </div>
+
+          <!-- 卡片 2 -->
+          <div class="veg-item">
+            <img src="images/veg2.png" alt="Corn">
+            <div class="veg-info">
+              <h3 class="veg-title">Corn</h3>
+              <p class="veg-sub">Corn</p>
+            </div>
+          </div>
+
+          <!-- 卡片 3 -->
+          <div class="veg-item">
+            <img src="images/veg3.png" alt="Pepper">
+            <div class="veg-info">
+              <h3 class="veg-title">Pepper</h3>
+              <p class="veg-sub">Pepper</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- 右側 Contact 區塊 -->
+      <section class="card">
+        <h2 class="card-title">Contact</h2>
+        <div class="contact-box">
+          <p>For any questions or suggestions about Vegetables, Vegetables Club or your online order you can contact Vegetables Customer Service by phone, email or post and we'll be happy to help.</p>
+          <hr>
+          <p>E-mail : Vegetables@aaabbccc.com</p>
+          <p>PHONE : +886-123-456-789</p>
+        </div>
+      </section>
+    </main>
+
+  </div>
+
+  <!-- 5. 頁尾 Footer -->
+  <footer class="footer">
+    <p>Copyrights 2017 Vegetables cise / Design by Vegetables</p>
+  </footer>
+
+</body>
+</html>

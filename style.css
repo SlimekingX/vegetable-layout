@@ -1,0 +1,232 @@
+/* ==========================================
+   1. 設計規範變數設定 (Design System Variables)
+   ========================================== */
+:root {
+  /* Color System */
+  --primary: #778A50;
+  --background: #EDF2C5;
+  --content-text: #7D7D7D;
+  --content-bg: #F7FBDA;
+
+  /* Typography System - Noto Sans */
+  --font-family: 'Noto Sans', sans-serif;
+}
+
+/* 全域重置 */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--background); /* #EDF2C5 */
+  font-family: var(--font-family);
+  color: var(--content-text); /* #7D7D7D */
+}
+
+/* 主要容器 (固定寬度並置中) */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px 15px 40px;
+}
+
+/* ==========================================
+   2. 頁首 Header 區塊
+   ========================================== */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0 15px;
+}
+
+/* Head1 規範：Font Size 44px, Line-height normal, Weight Black(900) */
+.logo {
+  font-size: 44px;
+  line-height: normal;
+  font-weight: 900;
+  color: var(--primary); /* #778A50 */
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 6px;
+}
+
+.social-icons img {
+  width: 24px;
+  height: 24px;
+}
+
+/* Text1 規範：Font Size 14px, Line-height normal, Weight Bold(700) */
+.auth-buttons .btn {
+  text-decoration: none;
+  font-size: 14px;
+  line-height: normal;
+  font-weight: 700;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  padding: 4px 10px;
+  border-radius: 2px;
+  display: inline-block;
+}
+
+/* ==========================================
+   3. 導覽列 Navbar
+   ========================================== */
+.navbar {
+  background-color: var(--primary); /* #778A50 */
+  margin-top: 10px;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+}
+
+/* Head2 規範：Font Size 16px, Line-height 150%(24px), Weight Bold(700) */
+.navbar a {
+  display: block;
+  padding: 10px 24px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 1.5; /* 150% */
+  font-weight: 700;
+}
+
+.navbar a:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* ==========================================
+   4. 主視覺 Banner
+   ========================================== */
+.banner {
+  margin-top: 15px;
+}
+
+.banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ==========================================
+   5. 主要內容區 Main Content
+   ========================================== */
+.main-content {
+  display: flex;
+  gap: 20px;
+  margin-top: 25px;
+}
+
+.card {
+  flex: 1;
+}
+
+/* Head2 規範：Font Size 16px, Line-height 150%, Weight Bold(700) */
+.card-title {
+  background-color: var(--primary); /* #778A50 */
+  color: #ffffff;
+  padding: 8px 15px;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+/* 左側圖片區：容器 */
+.vegetable-grid {
+  display: flex;
+  gap: 15px; /* 卡片間距 */
+  width: 100%;
+}
+
+/* 蔬菜單一卡片（包含圖片與下方文字區塊） */
+.veg-item {
+  flex: 1;
+  min-width: 0;
+  background-color: var(--content-bg); /* #F7FBDA 淡黃綠背景 */
+  display: flex;
+  flex-direction: column;
+}
+
+/* 卡片圖片 */
+.veg-item img {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* 正方形比例 */
+  object-fit: cover;
+  display: block;
+}
+
+/* 卡片下方文字容器 */
+.veg-info {
+  padding: 8px 10px 25px;
+  text-align: left; /* 新增：確保卡片內所有文字預設靠左對齊 */
+}
+
+/* 第一列：粗體標題 (橄欖綠) */
+.veg-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1.2;
+  margin-bottom: 2px;
+  text-align: left; /* 靠左對齊 */
+}
+
+/* 第二列：說明小字 (灰色) */
+.veg-sub {
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--content-text);
+  line-height: 1.2;
+  text-align: left; /* 新增：強制說明小字靠左對齊 */
+}
+
+/* 右側 Contact 文字區 */
+.contact-box {
+  background-color: var(--content-bg); /* #F7FBDA */
+  padding: 18px;
+}
+
+/* Text2 規範：Font Size 12px, Line-height 150%(18px), Weight Regular(400) */
+.contact-box p {
+  font-size: 12px;
+  line-height: 1.5; /* 150% */
+  font-weight: 400;
+  color: var(--content-text); /* #7D7D7D */
+}
+
+.contact-box hr {
+  margin: 15px 0;
+  border: 0;
+  border-top: 1px solid #dcdcdc;
+}
+
+/* ==========================================
+   6. 頁尾 Footer
+   ========================================== */
+.footer {
+  background-color: var(--primary); /* #778A50 */
+  color: #ffffff;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 40px;
+}
+
+/* Text2 規範：Font Size 12px, Line-height 150%, Weight Regular(400) */
+.footer p {
+  font-size: 12px;
+  line-height: 1.5;
+  font-weight: 400;
+}
